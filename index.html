@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PASSION – The Cultural Fest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1b0a3c;--ink:#fff5e6;--mag:#ff2e88;--cob:#3d5afe;--saf:#ffb300;--lime:#c6f432;--cor:#ff6b4a;--dark:#1b0a3c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12062b}}
+:root[data-theme="dark"]{--bg:#12062b}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 'DM Sans',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.disp{font-family:'Syne',system-ui,sans-serif;font-weight:800;line-height:.95}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 5vw;position:relative;z-index:2}
+nav b{font:800 1.3rem 'Syne',sans-serif}
+nav a{color:var(--ink);text-decoration:none;margin-left:1.4rem;font-weight:500}
+nav a:hover,a:focus-visible{text-decoration:underline;outline:none}
+.hero{padding:3vh 5vw 6vh;min-height:78vh;display:flex;flex-direction:column;justify-content:center}
+.word{display:flex;justify-content:space-between;font-size:clamp(3.2rem,17.5vw,17rem);line-height:.85;user-select:none}
+.word span{display:inline-block;transition:transform .35s cubic-bezier(.3,1.8,.5,1);cursor:default}
+.word span:hover{transform:translateY(-.12em) rotate(-9deg) scale(1.08)}
+.word span:nth-child(1){color:var(--mag)}.word span:nth-child(2){color:var(--saf)}.word span:nth-child(3){color:var(--lime)}
+.word span:nth-child(4){color:var(--cor)}.word span:nth-child(5){color:#8fa0ff}.word span:nth-child(6){color:var(--mag)}.word span:nth-child(7){color:var(--saf)}
+@media (prefers-reduced-motion:no-preference){.word span{animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.word span:nth-child(2){animation-delay:.07s}.word span:nth-child(3){animation-delay:.14s}.word span:nth-child(4){animation-delay:.21s}.word span:nth-child(5){animation-delay:.28s}.word span:nth-child(6){animation-delay:.35s}.word span:nth-child(7){animation-delay:.42s}
+@keyframes drop{from{transform:translateY(-120%) rotate(18deg);opacity:0}}
+.belt div{animation:slide 28s linear infinite}@keyframes slide{to{transform:translateX(-50%)}}}
+.tag{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-top:2.2rem;align-items:end}
+.tag p{max-width:34ch;font-size:1.25rem}
+.btn{display:inline-block;background:var(--mag);color:#fff;padding:.9rem 1.7rem;border-radius:99px;font-weight:700;text-decoration:none;border:3px solid var(--ink)}
+.btn:hover,.btn:focus-visible{background:var(--saf);color:var(--dark);outline:3px solid var(--ink);outline-offset:3px}
+.belt{background:var(--lime);color:var(--dark);overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg);margin:1rem -2vw}
+.belt div{display:inline-block;padding:.8rem 0;font:800 1.5rem 'Syne',sans-serif}
+.belt i{font-style:normal;margin:0 1.4rem}
+.band{padding:clamp(3rem,9vw,7rem) 5vw}
+.band .in{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1.2fr;gap:2rem 4rem;align-items:start}
+.band h2{font-size:clamp(3rem,10vw,7.5rem)}
+.band .lead{font-size:1.15rem;margin-top:1.2rem;max-width:30ch}
+.comps{list-style:none;padding:0;display:grid;gap:.9rem}
+.comps li{border:3px solid currentColor;border-radius:1.2rem;font:800 clamp(1.3rem,3vw,2rem) 'Syne',sans-serif;line-height:1.05;transition:background .2s,color .2s}.comps a{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 1.4rem;color:inherit;text-decoration:none;border-radius:1rem}.comps a:focus-visible{outline:3px solid currentColor;outline-offset:4px}.comps em{display:block;font:500 .85rem 'DM Sans',sans-serif;margin-top:.35rem}.comps li.soon{opacity:.65}.comps li.soon a{pointer-events:none}
+.comps li small{font:700 .85rem 'DM Sans',sans-serif;border:2px solid currentColor;border-radius:99px;padding:.2rem .8rem;white-space:nowrap}
+.comps li:hover{background:var(--dark);color:var(--ink)}
+.dance{background:var(--mag);color:#fff}.music{background:var(--cob);color:#fff}.drama{background:var(--saf);color:var(--dark)}.fashion{background:var(--lime);color:var(--dark)}.art{background:var(--cor);color:var(--dark)}
+.dance .comps li:hover{color:var(--mag)}.music .comps li:hover{color:#9fb0ff}.drama .comps li:hover{color:var(--saf)}.fashion .comps li:hover{color:var(--lime)}.art .comps li:hover{color:var(--cor)}
+.reg{padding:clamp(3rem,9vw,7rem) 5vw;text-align:center}
+.reg h2{font-size:clamp(2.6rem,9vw,6.5rem);max-width:12ch;margin:0 auto 1.4rem}
+.reg p{max-width:46ch;margin:0 auto 2rem}
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:1000px;margin:0 auto 2.4rem;text-align:left}
+.how div{background:rgba(255,245,230,.08);border-radius:1.2rem;padding:1.2rem}
+.how b{display:block;font:800 1.2rem 'Syne',sans-serif;margin-bottom:.3rem}
+footer{padding:2rem 5vw;text-align:center;opacity:.7;font-size:.95rem}
+@media(max-width:760px){.band .in{grid-template-columns:1fr}nav a{margin-left:.9rem}}
+</style>
+</head>
+<body>
+<nav><b>PASSION</b><div><a href="#events">Events</a><a href="#register">Register</a></div></nav>
+
+<header class="hero">
+  <h1 class="word" aria-label="PASSION"><span>P</span><span>A</span><span>S</span><span>S</span><span>I</span><span>O</span><span>N</span></h1>
+  <div class="tag">
+    <p>The cultural fest where you dance, sing, act, strut and paint it all out. Nine stages, one big feeling.</p>
+    <a class="btn" href="#events">See the competitions</a>
+  </div>
+</header>
+
+<div class="belt" aria-hidden="true"><div>
+  <span>DANCE<i>✦</i>MUSIC<i>✦</i>DRAMA<i>✦</i>FASHION<i>✦</i>ART<i>✦</i></span><span>DANCE<i>✦</i>MUSIC<i>✦</i>DRAMA<i>✦</i>FASHION<i>✦</i>ART<i>✦</i></span><span>DANCE<i>✦</i>MUSIC<i>✦</i>DRAMA<i>✦</i>FASHION<i>✦</i>ART<i>✦</i></span><span>DANCE<i>✦</i>MUSIC<i>✦</i>DRAMA<i>✦</i>FASHION<i>✦</i>ART<i>✦</i></span>
+</div></div>
+
+<main id="events">
+<section class="band dance"><div class="in">
+  <div><h2>Dance</h2><p class="lead">Move as one or own the floor alone.</p></div>
+  <ul class="comps"><li><a href="https://unstop.com/o/dMGpwXU?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Group Dance<em>Kinesis on Unstop</em></span><small>Team</small></a></li><li><a href="https://unstop.com/o/dMGpwXU?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Solo Dance<em>Kinesis on Unstop</em></span><small>Solo</small></a></li></ul>
+</div></section>
+
+<section class="band music"><div class="in">
+  <div><h2>Music</h2><p class="lead">Bring the band. Bring the voice.</p></div>
+  <ul class="comps"><li class="soon"><a href="#register"><span>Battle of Bands<em>Link coming soon</em></span><small>Band</small></a></li><li><a href="https://unstop.com/o/2za0dYy?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Solo / Duet Singing<em>Register on Unstop</em></span><small>Solo or duo</small></a></li></ul>
+</div></section>
+
+<section class="band drama"><div class="in">
+  <div><h2>Drama</h2><p class="lead">Take the stage with a cast or a monologue.</p></div>
+  <ul class="comps"><li><a href="https://unstop.com/o/AtXdhgI?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Group Drama<em>Masque on Unstop</em></span><small>Team</small></a></li><li><a href="https://unstop.com/o/4Nw2ysG?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Solo Drama<em>Kahani on Unstop</em></span><small>Solo</small></a></li></ul>
+</div></section>
+
+<section class="band fashion"><div class="in">
+  <div><h2>Fashion Show</h2><p class="lead">Walk the ramp. Own the look.</p></div>
+  <ul class="comps"><li><a href="https://unstop.com/o/23v7DSJ?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Fashion Show<em>Morphe on Unstop</em></span><small>Team</small></a></li></ul>
+</div></section>
+
+<section class="band art"><div class="in">
+  <div><h2>Art</h2><p class="lead">Colour outside every line.</p></div>
+  <ul class="comps"><li><a href="https://unstop.com/o/spYrUh1?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Tote-ally Yours<em>Tote bag competition</em></span><small>Solo</small></a></li><li><a href="https://unstop.com/o/n0cxoHe?lb=useHG5P4&amp;utm_medium=Share&amp;utm_source=events&amp;utm_campaign=Givjemdc82358" target="_blank" rel="noopener"><span>Overthinking in Colours<em>Register on Unstop</em></span><small>Solo</small></a></li></ul>
+</div></section>
+</main>
+
+<section class="reg" id="register">
+  <h2>Pick your stage.</h2>
+  <p>Tap any competition above to register on Unstop. Group events need your full team or band.</p>
+  <div class="how">
+    <div><b>Choose</b>Pick one competition or try several.</div>
+    <div><b>Gather</b>Group events need your full team or band.</div>
+    <div><b>Show up</b>Dates, venue and rules will be posted here.</div>
+  </div>
+  <a class="btn" href="#events">Browse all competitions</a>
+</section>
+
+<footer>PASSION cultural fest. Made with colour.</footer>
+</body>
+</html>
